@@ -42,7 +42,7 @@
       </MenuBar>
       <HBox fx:id="hbox">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets left="15.0" right="15.0" top="15.0" />
                </HBox.margin>
