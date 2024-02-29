@@ -1,0 +1,23 @@
+.button {
+    -fx-background-color: #aa7733;
+}
+
+#menubar {
+    -fx-background-color: #884411;
+}
+
+#vboxTextandButtons {
+    -fx-background-color: #79dc05;
+}
+
+#hbox {
+    -fx-background-color: #aa7733;
+}
+
+#paneBottom {
+    -fx-background-color: #aa7733;
+}
+
+#paneTop {
+    -fx-background-color: #999999;
+}

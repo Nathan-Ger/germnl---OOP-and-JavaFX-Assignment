@@ -1,16 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
+
+<VBox fx:id="vboxRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <MenuBar fx:id="menubar">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Theme">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox fx:id="hbox">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <TableView>
+              <columns>
+                <TableColumn prefWidth="59.200013756752014" text="ID" />
+                <TableColumn prefWidth="81.60002899169922" text="First Name" />
+                  <TableColumn prefWidth="85.5999755859375" text="Last Name" />
+                  <TableColumn prefWidth="75.0" text="Department" />
+                  <TableColumn prefWidth="99.99996948242188" text="Major" />
+                  <TableColumn prefWidth="160.79990844726558" text="Email" />
+              </columns>
+            </TableView>
+            <VBox fx:id="vboxTextandButtons" prefHeight="474.0" prefWidth="217.0">
+               <children>
+                  <TextField fx:id="textfieldFName">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textfieldLName">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textfieldDepartment">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textfieldMajor">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textfieldEmail">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textfieldImgURL">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="buttonClear" mnemonicParsing="false" prefHeight="34.0" prefWidth="10000.0" text="Clear">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="85.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" prefHeight="33.0" prefWidth="10000.0" text="Add">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonDelete" mnemonicParsing="false" prefHeight="33.0" prefWidth="10000.0" text="Delete">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonEdit" mnemonicParsing="false" prefHeight="33.0" prefWidth="207.0" text="Edit">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane fx:id="paneTop" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" />
+      <Pane fx:id="paneBottom" maxHeight="10.0" minHeight="10.0" prefHeight="10.0" />
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </VBox>
